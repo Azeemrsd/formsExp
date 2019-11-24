@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6 mx-auto text-center">
+    <h1>This is a login Form</h1>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" class="form-control"
+             placeholder="Enter your Email"
+             ngModel
+             email
+             required
+            >
+          </div>
+          <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" name="Password" id="Password"
+             class="form-control" placeholder="Enter Password" aria-describedby="helpId"
+             ngModel
+             minlength="6"
+             required
+             
+             
+             >
+            
+          </div>
+          <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
+          </form>
+  </div>
+</div>
